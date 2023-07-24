@@ -97,7 +97,7 @@ body {
 /* Define the custom list style */
 .custom-list {
   list-style-type: none;
-  padding-left: 25px;
+  padding-left: 0px;
   /* Add some left padding to create space for the image */
   text-align: left;
   /* Align the list items to the left */
@@ -111,17 +111,17 @@ body {
   /* This pseudo-element is used for the list marker */
   display: inline-block;
   /* Make it an inline block element */
-  width: 15px;
+  width: 10px;
   /* Set the width of the image */
-  height: 15px;
+  height: 10px;
   /* Set the height of the image */
-  background-image: url('hat.svg');
+  background-image: url('images/hat.svg');
   /* Set the path to your SVG image */
   background-size: contain;
   /* Adjusts the image size to fit the specified dimensions */
   background-repeat: no-repeat;
   /* Prevent the image from repeating */
-  margin-right: 15px;
+  margin-right: 5px;
   /* Add some space between the image and the list item content */
   vertical-align: middle;
 }
