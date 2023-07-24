@@ -1,0 +1,178 @@
+main {
+  margin: 0 auto;
+  padding: 45px;
+  padding-left: 0px;
+}
+
+section {
+  width: 1300px;
+  padding: 25px;
+}
+
+.even-row {
+  background-color: white;
+  display: grid;
+  place-items: center;
+  margin: 0px;
+  width: 100%;
+}
+
+.odd-row {
+  background-color: rgb(248, 248, 248);
+  display: grid;
+  place-items: center;
+  margin: 0px;
+  width: 100%;
+}
+
+.navbar-nav .active {
+  color: black;
+  font-weight: bold;
+}
+
+.bi-scholar:hover {
+  fill: #4285F4;
+  transform: scale(1.5);
+}
+
+.bi-scholar {
+  padding-right: 4px;
+  margin-left: 4px;
+}
+
+.bi-twitter:hover {
+  fill: #1DA1F2;
+  transform: scale(1.5);
+}
+
+.bi-twitter {
+  padding-right: 4px;
+  margin-left: 4px;
+}
+
+.bi-instagram:hover {
+  fill: #fd5949;
+  transform: scale(1.5);
+}
+
+.bi-instagram {
+  padding-right: 4px;
+  margin-left: 4px;
+}
+
+
+.bi-linkedin:hover {
+  fill: #0072b1;
+  transform: scale(1.5);
+}
+
+.bi-linkedin {
+  padding-right: 4px;
+  margin-left: 4px;
+}
+
+.bi-github:hover {
+  fill: #171515;
+  transform: scale(1.5);
+}
+
+.bi-github {
+  padding-right: 4px;
+  margin-left: 4px;
+}
+
+.bi-envelope-at:hover {
+  transform: scale(1.5);
+}
+
+.bi-envelope-at {
+  margin-left: 4px;
+}
+
+body {
+  font-family: 'Lato Regular', sans-serif;
+  line-height: 1.7;
+}
+
+/* Define the custom list style */
+.custom-list {
+  list-style-type: none;
+  padding-left: 25px;
+  /* Add some left padding to create space for the image */
+  text-align: left;
+  /* Align the list items to the left */
+  font-size: small;
+}
+
+
+/* Decrease the size of the list-style-image */
+.custom-list li::before {
+  content: "";
+  /* This pseudo-element is used for the list marker */
+  display: inline-block;
+  /* Make it an inline block element */
+  width: 15px;
+  /* Set the width of the image */
+  height: 15px;
+  /* Set the height of the image */
+  background-image: url('hat.svg');
+  /* Set the path to your SVG image */
+  background-size: contain;
+  /* Adjusts the image size to fit the specified dimensions */
+  background-repeat: no-repeat;
+  /* Prevent the image from repeating */
+  margin-right: 15px;
+  /* Add some space between the image and the list item content */
+  vertical-align: middle;
+}
+
+
+@font-face {
+  font-family: 'Lato Black';
+  src: url('fonts/Lato-Black.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Lato BlackItallic';
+  src: url('fonts/Lato-BlackItallic.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url('fonts/Lato-Bold.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Lato BoldItallic';
+  src: url('fonts/Lato-BoldItallic.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Lato Itallic';
+  src: url('fonts/Lato-Itallic.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Lato Light';
+  src: url('fonts/Lato-Light.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Lato LightItallic';
+  src: url('fonts/Lato-LightItallic.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: url('fonts/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato Thin';
+  src: url('fonts/Lato-Thin.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Lato ThinItallic';
+  src: url('fonts/Lato-ThinItallic.ttf') format('truetype');
+}
