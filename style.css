@@ -6,7 +6,12 @@ main {
 
 section {
   width: 1300px;
-  padding: 25px;
+  padding: 15px;
+  padding-top: 65px;
+}
+
+.section-title {
+  margin-bottom: 20px;
 }
 
 .even-row {
