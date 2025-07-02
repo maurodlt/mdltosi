@@ -131,6 +131,56 @@ body {
   vertical-align: middle;
 }
 
+h2.PUBLICATION_TYPE_STR {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline;
+  margin-left: 8px;
+}
+
+h3.YEAR {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 12px;
+}
+
+.bibtexentry{
+  font-size: 14px;
+}
+
+.publications-scroll-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.publications-scroll-container {
+  max-height: 500px; /* Adjust this value to your desired fixed height for the publications list */
+  overflow-y: auto;  /* Ensures vertical scrolling appears when content exceeds max-height */
+  border: 1px solid #e0e0e0; /* Optional: Adds a light border around the scrolling area */
+  padding: 15px; /* Optional: Adds internal spacing */
+  border-radius: 5px; /* Optional: Rounds the corners of the container */
+
+  /* Styles for Webkit browsers (Chrome, Safari, Edge, Opera) */
+  &::-webkit-scrollbar {
+    width: 8px; /* Sets the width of the vertical scrollbar */
+    height: 8px; /* Sets the height of the horizontal scrollbar (if needed) */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb (the draggable part) */
+    border-radius: 4px; /* Rounds the corners of the thumb */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the scrollbar track (the background of the scrollbar) */
+    border-radius: 4px; /* Rounds the corners of the track */
+  }
+
+  /* Styles for Firefox */
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #888 #f1f1f1; /* Sets the thumb color and track color for Firefox */
+}
+
 
 @font-face {
   font-family: 'Lato Black';

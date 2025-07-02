@@ -7,18 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Font Awesome icons (optional) -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-    integrity="sha384-XXXXXXXXXXXXX" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    integrity="sha512-PR4x4Z4wMD4jHZv2APJlWk3yE3qsfBtMvY/g1MDo/1Zg5wdb/5HvID5Ax5DddgRfzR7jF0bkHteG7WfZnbQysw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" type="text/css" href="style.css">
+  
+
+  <bibtex src="publications.bib"></bibtex>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.min.js"></script>
+
 </head>
 
 <body>
@@ -300,12 +301,63 @@
           <div class="col-md-12 col-lg-3 section-title">
             <h2 class="card-title" style="text-align:left; font-family: Lato Regular;">Publications</h2>
           </div>
-          <div class="col-md-12 col-lg">
-              <iframe 
-              src="https://orbilu.uni.lu/widget?query=%28%28uid%3A50040093%29%29&amp;chars=1000&amp;etal=3&amp;language=en&amp;data=&amp;format=&amp;css=%2Ffiles%2Fcss%2Fwl.css&amp;sort_by0=1&amp;order0=DESC&amp;sort_by1=3&amp;order1=ASC&amp;sort_by2=2&amp;order2=ASC" 
-              marginwidth="0" marginheight="0" frameborder="0" height="500" scrolling="auto" width="100%"></iframe>
+
+          <div class="col-md-12 col-lg-9">
+            <div class="publications-scroll-container bg-body-tertiary p-3 rounded-2">            
+            <div class="bibtex_structure">
+              <div class="sort publication_type" extra="ASC number">
+                <div class="group publication_type_str" extra="ASC number">
+                    <div style="padding-bottom:10px;"></div>
+                    <div class="sort year" extra="DESC number">
+                      <div class="templates"></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            
+            <div id="bibtex_display">
+            <div class="bibtex_template" style="display: none;">
+              <ul> <li>
+                
+                <span class="if title"><em><span class="title", style="font-weight: bold;"></span></em>,</span>
+                 
+                <div class="if author">
+                  <span class="author"></span>
+                </div>
+                <div>
+                  <span class="if journal"><em><span class="journal"></span></em>,</span>
+                  <span class="if publisher"><em><span class="publisher"></span></em>,</span>
+                  <span class="if booktitle">In <em><span class="booktitle"></span></em>,</span>
+                  <span class="if address"><span class="address"></span>,</span>
+                  <span class="if month"><span class="month"></span>,</span>
+                  <span class="if year"><span class="year"></span>.</span>
+                  <span class="if note"><span class="note"></span>,</span>
+                  <span class="if school"><span class="school"></span>,</span>
+                  <span class="if doi">
+                    <a class="bibtexVar" href="https://doi.org/+doi+" extra="doi" target="_blank">[doi]</a>
+                  </span>
+                  <span class="if pdf">
+                    <a class="bibtexVar" href="/publications/+pdf+" extra="pdf" target="_blank">[pdf]</a>
+                  </span>
+                  <a class="bibtexVar" role="button" data-bs-toggle="collapse"
+                    data-bs-target="#bib+BIBTEXKEY+" aria-expanded="false"
+                    aria-controls="bib+BIBTEXKEY+" extra="BIBTEXKEY" bibtexjs-css-escape>
+                    [bib]
+                  </a>
+
+                
+              <div class="bibtexVar collapse" id="bib+BIBTEXKEY+" extra="BIBTEXKEY">
+                <div class="card card-body bg-light">
+                  <pre><span class="bibtexraw noread"></span></pre>
+                </div>
+              </div>
+
+              <div style="display:none"><span class="bibtextype"></span></div>
+              </li></ul>
+            </div>
           </div>
         </div>
+      </div>
       </section>
     </div>
 
@@ -422,9 +474,7 @@
   </footer>
 
   <!-- Bootstrap JavaScript bundle (popper.js included) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     // Function to close the collapsed menu when a link is clicked
     function closeNavbarMenu() {
@@ -442,7 +492,29 @@
     navLinks.forEach(link => {
       link.addEventListener('click', closeNavbarMenu);
     });
+
+
   </script>
+
+<script>
+  function removeFieldFromBibRaw(field) {
+    document.querySelectorAll('.bibtexraw').forEach(span => {
+      span.innerHTML = span.innerHTML
+        .replace(new RegExp(`\\s*${field}\\s*=\\s*\\{[^}]*\\},?\\n?`, 'gi'), '');
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Wait a bit for bibtex-js to render the raw bib entries
+    setTimeout(() => {
+      removeFieldFromBibRaw('publication_type');
+      removeFieldFromBibRaw('publication_type_str');
+      removeFieldFromBibRaw('pdf');
+    }, 500); // Adjust delay as needed based on rendering time
+  });
+</script>
+
+
 </body>
 
 </html>
