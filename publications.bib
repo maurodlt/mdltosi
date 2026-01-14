@@ -228,6 +228,19 @@ keywords = {Online Learning, Data streams, Concept drifts, Asynchronous & decent
 abstract = {Online Learning (OL) is a sub-field of Machine Learning (ML) which focuses on solving time-sensitive problems through iterative learning from data streams. This emerging field is characterized by the challenge of concept drifts, where the underlying distribution of the incoming data values evolves over time. Traditional OL algorithms, while efficient and less resource-intensive than conventional ML methods, often fall short in solving non-linear, high-dimensional problems. This prevalent gap has recently led to the integration of Artificial Neural Networks (ANN) into OL settings. These models support real-time inference. However, because they rely on offline training, their performance often degrades during or shortly after concept drifts. In this paper, we extend TensAIR, an online stream-processing engine that we specifically designed for the distributed training of ANN models. Our extensions allow TensAIR to automatically identify concept drifts using the OPTWIN drift detector algorithm, triggering the retraining of the ANN models as soon as drifts are detected. Additionally, we propose a novel decentralized and asynchronous stochastic gradient descent (DASGD) algorithm, which is central to TensAIR’s performance improvements over existing methods, and we formally prove its convergence under the specified conditions. We assessed TensAIR both in single-server and HPC settings, evaluating its distributed training performance over various multi-CPU and multi-GPU scenarios. As result, we show TensAIR to converge within the best known theoretical bounds while achieving up to 78× higher sustainable throughput than state-of-the-art baselines. Based on our results, we expect to inspire further research and applications exploiting the distributed training of ANN models in HPC platforms for a wide range of OL settings.}
 }
 
+@inproceedings{tosi2025ocl,
+  author={Tosi, Mauro Dalle Lucca and Cabot, Jordi},
+  booktitle={Joint Proceedings of the STAF 2025 Workshops: OCL, OOPSLE, LLM4SE, ICMM, AgileMDE, AI4DPS, and TTC co-located with the International Conference on Software Technologies: Applications and Foundations (STAF 2025)}, 
+  publication_type = {3},
+  publication_type_str = {Workshop Proceedings},
+  publisher = {CEUR Workshop Proceedings},
+  volume = {4122},
+  title={OCL on life support: can we revitalize the community for a stronger future?}, 
+  year={2025},
+  pdf={https://raw.githubusercontent.com/maurodlt/mdltosi/4c445449223863f347ed96049e2f576a5bf641f4/publications/tosi2025ocl.pdf},
+  keywords={OCL, Object Constraint Language, Metascience, Scientometrics, Community},
+  doi={https://ceur-ws.org/Vol-4122/short1.pdf}}
+
 @misc{tosi2025ask,
       title={Ask Safely: Privacy-Aware LLM Query Generation for Knowledge Graphs}, 
       publication_type = {5},
@@ -241,6 +254,7 @@ abstract = {Online Learning (OL) is a sub-field of Machine Learning (ML) which f
       doi={https://doi.org/10.48550/arXiv.2512.04852},
       url={https://arxiv.org/abs/2512.04852}, 
 }
+
 
 
 
